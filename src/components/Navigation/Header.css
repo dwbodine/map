@@ -1,0 +1,88 @@
+#header {
+  background: rgba(242, 82, 82, 0.8);
+  width: auto;
+  min-height: 60px;
+  position: static;
+  margin-bottom: 10px;
+}
+
+#header:before,
+#header:after {
+  content: " ";
+  display: table;
+}
+
+#header:after {
+  clear: both;
+}
+
+#masthead {
+  width: auto;
+  margin: 5px auto 0 auto;
+  position: relative;
+}
+
+#masthead:before,
+#masthead:after {
+  content: " ";
+  display: table;
+}
+
+#masthead:after {
+  clear: both;
+}
+
+#branding {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0px 0 0px 0;
+  height: 24px;
+}
+
+#branding #blog-title {
+  max-width: 320px;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+#branding a {
+  display: block;
+  text-decoration: none;
+}
+
+#branding img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+#branding h1 {
+  font-size: 34px;
+  font-family: "Dancing Script", serif;
+  color: #f25252;
+  line-height: 36px;
+  border: 0;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#branding .description {
+  font-size: 16px;
+  font-family: "Open Sans", serif;
+  color: #faffe3;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media all and (max-width: 1024px) {
+  #header {
+    max-height: none;
+    width: auto;
+    height: auto;
+  }
+}

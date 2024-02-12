@@ -1,0 +1,42 @@
+.footer_container {
+  clear: both;
+  width: auto;
+  margin: 0 auto;
+}
+
+.footer_wrapper {
+  clear: both;
+  width: auto;
+  margin: 0 auto;
+  width: auto;
+  padding: 5px 0;
+  text-align: center;
+  background: #2e2e2e;
+  min-height: 65px;
+  clear: both;
+  z-index: 2;
+}
+
+#footer {
+  /* This sets the size and font styles of the footer area */
+  clear: both;
+  width: auto;
+  text-align: center;
+  margin: 15px auto 15px auto;
+  padding-top: 5px;
+  color: #ffffff;
+  font-size: 10px;
+  font-family: "Open Sans", serif;
+}
+
+#footer a {
+  /* This sets the color of the footer links */
+  color: #d4f52e;
+}
+
+#footer a:hover,
+#footer a:active {
+  /* This sets the color and style of the hover and active states of the footer links */
+  color: #faffe3;
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+.contact-card {
+  text-align: center;
+  color: #000;
+  background: #fff;
+  padding: 10px 25px 25px 25px;
+  max-width: 400px;
+  white-space: nowrap;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.contact-card h2 {
+  color: #000;
+}
+
+.contact-card a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact-card a:hover {
+  color: rgba(242, 82, 82, 0.8);
+}

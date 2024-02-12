@@ -1,0 +1,9 @@
+figure.aligncenter {
+  text-align: center;
+  max-width: 100%;
+}
+
+.entry-content img {
+  margin: 0 auto;
+  max-width: 100%;
+}

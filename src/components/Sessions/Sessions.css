@@ -1,0 +1,16 @@
+.session {
+  line-height: 1.5em;
+}
+
+div.aligncenter {
+  text-align: center;
+}
+
+p.alignleft {
+  text-align: left;
+}
+
+span.highlight {
+  color: #993300;
+  font-weight: bold;
+}
