@@ -7,7 +7,6 @@ import GalleryRouter from '../GalleryRouter/GalleryRouter';
 import InvestmentsRouter from '../InvestmentsRouter/InvestmentsRouter';
 import './Header.css';
 import './Navigation.css';
-import StuporBowl from '../StuporBowl/StuporBowl';
 
 export default function Navigation () {
     const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
@@ -250,9 +249,6 @@ export default function Navigation () {
                                 </Route>
                                 <Route path="/investments">
                                     <InvestmentsRouter />
-                                </Route>
-                                <Route path="/stuporbowl">
-                                    <StuporBowl />
                                 </Route>
                                 <Route path="/">
                                     <Home />
