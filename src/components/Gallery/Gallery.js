@@ -7,10 +7,8 @@ import './Gallery.css';
 const jsonData = {
     children: require('../../data/children.json'),
     family: require('../../data/family.json'),
-    graduates: require('../../data/graduates.json'),
     justforu: require('../../data/justforu.json'),
-    maternity: require('../../data/maternity.json'),
-    newborns: require('../../data/newborns.json')
+    maternity: require('../../data/maternity.json')
 };
 
 export default function Gallery (props) {

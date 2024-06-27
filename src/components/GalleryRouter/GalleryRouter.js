@@ -15,17 +15,11 @@ export default function GalleryRouter () {
                 <Route path={`${path}/family`}>
                     <Gallery title="Family" name="family" />
                 </Route>
-                <Route path={`${path}/graduates`}>
-                    <Gallery title="Graduates" name="graduates" />
-                </Route>
                 <Route path={`${path}/just-for-you`}>
                     <Gallery title="Just For You" name="justforu" />
                 </Route>
                 <Route path={`${path}/maternity`}>
                     <Gallery title="Maternity" name="maternity" />
-                </Route>
-                <Route path={`${path}/`}>
-                    <Gallery title="Newborns" name="newborns" />
                 </Route>
             </Switch>
         </>

@@ -7,7 +7,7 @@ export default function About () {
         <div>
             <h1 className="entry-title">Yours Truly</h1>
 
-            <div className="entry-content">
+            <div className="about-content">
                 <img
                     className="alignright size-full"
                     src="img/IMG_1239.jpg"
@@ -19,19 +19,19 @@ export default function About () {
                 />
                 <p>How often have you said to yourself, “Oh I wish I had my camera!”</p>
                 <p>
-          That’s because you want to freeze frame a moment in life. My name is
+          That's because you want to freeze frame a moment in life. My name is
           Marie Anna Bosker and I can make this possible for you. Marie Anna
           Photography specializes in on-location photography in the Sacramento
           Valley and extended Northern California region, although I have done
           shoots as far away as New York or Jamaica!! Do you have grandparents
           who would like a portrait in their garden? Perhaps your children have
-          a rocking good time in a bubble bath? You can come to me or I’ll come
+          a rocking good time in a bubble bath? You can come to me or I'll come
           there. There are poems in my pictures. I make a recording and
-          remembrance of life. When I remove my lens cap, it’s to capture life
+          remembrance of life. When I remove my lens cap, it's to capture life
           as we will never see it again. Life lives, and then the moment passes.
           Whether the event is an engagement, wedding, anniversary, maternity,
-          newborn, ballet recital, or family holiday…Marie Anna Photography
-          captures the art and beauty that is life.
+          ballet recital, or family holiday...Marie Anna Photography captures
+          the art and beauty that is life.
                 </p>
                 <p>
           From an early age art was important in my family. Several members
@@ -41,7 +41,7 @@ export default function About () {
                 </p>
                 <p>
           As mentioned above, I specialize in on-location photography which
-          means I travel to the client. Whether it’s a park, home, beach or
+          means I travel to the client. Whether it's a park, home, beach or
           mountains, no need to twist my arm, I love to travel.
                 </p>
                 <p>

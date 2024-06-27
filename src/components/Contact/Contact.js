@@ -5,7 +5,7 @@ export default function Contact () {
     document.title = 'Contact - Marie Anna Photography';
     return (
         <div>
-            <h1 className="entry-title">Contact</h1>
+            <h1 className="entry-title contact-title">Contact</h1>
 
             <div className="entry-content">
                 <div className="contact-card">

@@ -84,15 +84,6 @@ export default function Sessions () {
                     </li>
                     <li>Online proofing</li>
                 </ul>
-                <p>
-                    <strong>
-            Newborn Portraits <del>$385</del>
-                        <span className="highlight">$265.00</span>
-                        <br />
-                    </strong>
-                    <br /> One Session after your beautiful baby has arrived.
-                    <br /> Session includes:
-                </p>
                 <ul>
                     <li>
             25 custom designed arrival announcements (size – 4 x 5.5, envelopes

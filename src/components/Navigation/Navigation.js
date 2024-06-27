@@ -22,7 +22,7 @@ export default function Navigation () {
         if (li.tagName.toLowerCase() === 'li') {
             var menuItem = li.id;
             if (menuItem === 'menu-galleries') {
-                menuItem = 'menu-newborns';
+                menuItem = 'menu-children';
             } else if (menuItem === 'menu-investments') {
                 menuItem = 'menu-sessions';
             }
@@ -67,13 +67,9 @@ export default function Navigation () {
                 <div id="masthead">
                     <div id="branding">
                         <div id="blog-title">
-                            <span>
-                                <a href="/" title="Marie Anna Photography" rel="home">
-                                    <div className="description">
-                    Classic. Inspiring. Original.
-                                    </div>
-                                </a>
-                            </span>
+                            <a href="/" title="Marie Anna Photography" rel="home">
+                                <div className="description">Classic. Inspiring. Original.</div>
+                            </a>
                         </div>
                     </div>
                     <div id="menu_wrapper">
@@ -105,7 +101,7 @@ export default function Navigation () {
                                     </Link>
                                 </li>
                                 <li id="menu-galleries" onClick={_toggleGalleries}>
-                                    <Link to="/gallery/newborns">
+                                    <Link to="/gallery/children">
                                         <span>Galleries</span>
                                         <span id="galleryToggler">
                                             <i
@@ -126,11 +122,11 @@ export default function Navigation () {
                                     />
                                     <ul id="gallerySubMenu">
                                         <li
-                                            id="menu-newborns"
-                                            className={getClassName('menu-newborns')}
+                                            id="menu-children"
+                                            className={getClassName('menu-children')}
                                         >
-                                            <Link to="/gallery/newborns">
-                                                <span>Newborns</span>
+                                            <Link to="/gallery/children">
+                                                <span>Children</span>
                                             </Link>
                                         </li>
                                         <li
@@ -147,22 +143,6 @@ export default function Navigation () {
                                         >
                                             <Link to="/gallery/family">
                                                 <span>Family</span>
-                                            </Link>
-                                        </li>
-                                        <li
-                                            id="menu-graduates"
-                                            className={getClassName('menu-graduates')}
-                                        >
-                                            <Link to="/gallery/graduates">
-                                                <span>Graduates</span>
-                                            </Link>
-                                        </li>
-                                        <li
-                                            id="menu-children"
-                                            className={getClassName('menu-children')}
-                                        >
-                                            <Link to="/gallery/children">
-                                                <span>Children</span>
                                             </Link>
                                         </li>
                                         <li

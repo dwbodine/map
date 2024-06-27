@@ -41,9 +41,8 @@
 }
 
 #branding #blog-title {
-  max-width: 320px;
   margin: 0 auto;
-  word-wrap: break-word;
+  text-align: center;
 }
 
 #branding a {
@@ -72,11 +71,13 @@
 }
 
 #branding .description {
-  font-size: 16px;
+  font-size: 32px;
+  font-weight: bold;
   font-family: "Open Sans", serif;
   color: #faffe3;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 @media all and (max-width: 1024px) {
@@ -84,5 +85,9 @@
     max-height: none;
     width: auto;
     height: auto;
+  }
+
+  #branding .description {
+    font-size: 24px;
   }
 }

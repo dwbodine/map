@@ -11,7 +11,7 @@
   width: auto;
   padding: 5px 0;
   text-align: center;
-  background: #2e2e2e;
+  background: #f25252;
   min-height: 65px;
   clear: both;
   z-index: 2;
@@ -32,6 +32,8 @@
 #footer a {
   /* This sets the color of the footer links */
   color: #d4f52e;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #footer a:hover,
