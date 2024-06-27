@@ -8,7 +8,8 @@ const jsonData = {
     children: require('../../data/children.json'),
     family: require('../../data/family.json'),
     justforu: require('../../data/justforu.json'),
-    maternity: require('../../data/maternity.json')
+    maternity: require('../../data/maternity.json'),
+    vintage_flair: require('../../data/vintage_flair.json')
 };
 
 export default function Gallery (props) {

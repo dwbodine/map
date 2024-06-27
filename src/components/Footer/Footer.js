@@ -7,7 +7,7 @@ export default function Footer () {
         <div className="footer_container">
             <div className="footer_wrapper">
                 <div id="footer">
-          Copyright &copy; {year} Marie Anna Photography
+          Copyright &copy; 2007 - {year} Marie Anna Photography
                     <br />
                     <a href="/contact">Contact Us</a>
                 </div>

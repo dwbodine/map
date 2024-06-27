@@ -21,6 +21,9 @@ export default function GalleryRouter () {
                 <Route path={`${path}/maternity`}>
                     <Gallery title="Maternity" name="maternity" />
                 </Route>
+                <Route path={`${path}/vintage_flair`}>
+                    <Gallery title="Vintage Flair" name="vintage_flair" />
+                </Route>
             </Switch>
         </>
     );
