@@ -161,6 +161,14 @@ export default function Navigation () {
                                                 <span>Vintage Flair</span>
                                             </Link>
                                         </li>
+                                        <li
+                                            id="menu-weddings"
+                                            className={getClassName('menu-weddings')}
+                                        >
+                                            <Link to="/gallery/weddings">
+                                                <span>Weddings</span>
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li id="menu-investments" onClick={_toggleInvest}>

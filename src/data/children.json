@@ -1,5 +1,8 @@
 [
     {
+        "imageName": "/galleries/children/IMG_0116.jpg"
+    },
+    {
         "imageName": "/galleries/children/IMG_0637-1.jpg"
     },
     {
@@ -16,6 +19,9 @@
     },
     {
         "imageName": "/galleries/children/IMG_1818.jpg"
+    },
+    {
+        "imageName": "/galleries/children/IMG_1929.jpg"
     },
     {
         "imageName": "/galleries/children/IMG_2218.jpg"
@@ -42,10 +48,16 @@
         "imageName": "/galleries/children/IMG_5894.jpg"
     },
     {
-        "imageName": "/galleries/children/IMG_5938.JPG"
+        "imageName": "/galleries/children/IMG_5938.jpg"
     },
     {
         "imageName": "/galleries/children/IMG_6973.jpg"
+    },
+    {
+        "imageName": "/galleries/children/IMG_7460.jpg"
+    },
+    {
+        "imageName": "/galleries/children/IMG_7604-1.jpg"
     },
     {
         "imageName": "/galleries/children/IMG_8517-1.jpg"
@@ -54,6 +66,15 @@
         "imageName": "/galleries/children/IMG_9870.jpg"
     },
     {
-        "imageName": "/galleries/children/mason_1.JPG"
+        "imageName": "/galleries/children/IMG_9954.jpg"
+    },
+    {
+        "imageName": "/galleries/children/IMG_9959.jpg"
+    },
+    {
+        "imageName": "/galleries/children/IMG_9962.jpg"
+    },
+    {
+        "imageName": "/galleries/children/mason_1.jpg"
     }
 ]
