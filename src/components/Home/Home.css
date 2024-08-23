@@ -10,6 +10,7 @@ figure.aligncenter {
 .entry-content img {
   margin: 0 auto;
   max-width: 100%;
+  border: 5px solid black;
 }
 
 .entry-content figure {

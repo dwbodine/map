@@ -21,8 +21,7 @@ export default function About () {
                 <p>
           That's because you want to freeze frame a moment in life. My name is
           Marie Anna Bosker and I can make this possible for you. Marie Anna
-          Photography specializes in on-location photography in the Sacramento
-          Valley and extended Northern California region, although I have done
+          Photography specializes in on-location photography in North and South Carolina, although I have done
           shoots as far away as New York or Jamaica!! Do you have grandparents
           who would like a portrait in their garden? Perhaps your children have
           a rocking good time in a bubble bath? You can come to me or I'll come

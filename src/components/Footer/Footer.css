@@ -11,7 +11,7 @@
   width: auto;
   padding: 5px 0;
   text-align: center;
-  background: #f25252;
+  background: darkgray;
   min-height: 65px;
   clear: both;
   z-index: 2;
@@ -31,8 +31,8 @@
 
 #footer a {
   /* This sets the color of the footer links */
-  color: #d4f52e;
-  font-size: 20px;
+  color: black;
+  font-size: 30px;
   font-weight: bold;
 }
 

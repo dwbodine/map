@@ -1,5 +1,5 @@
 #header {
-  background: rgba(242, 82, 82, 0.8);
+  background-color: darkgray;
   width: auto;
   min-height: 60px;
   position: static;
@@ -59,7 +59,7 @@
 #branding h1 {
   font-size: 34px;
   font-family: "Dancing Script", serif;
-  color: #f25252;
+  color: darkgray;
   line-height: 36px;
   border: 0;
   margin-top: 15px;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&display=swap');
+
 @font-face {
   font-family: "Dancing Script";
   font-style: normal;
@@ -366,4 +368,9 @@ a:hover,
 a:active {
   color: #858585;
   text-decoration: none;
+}
+
+.entry-title {
+  font-family: "Playwrite FR Trad", "Open Sans", sans-serif;
+  color: black;
 }

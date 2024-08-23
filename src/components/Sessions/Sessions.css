@@ -14,3 +14,7 @@ span.highlight {
   color: #993300;
   font-weight: bold;
 }
+
+.session li {
+  line-height: 30px;
+}
