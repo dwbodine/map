@@ -7,10 +7,10 @@ import './Gallery.css';
 const jsonData = {
     children: require('../../data/children.json'),
     family: require('../../data/family.json'),
-    justforu: require('../../data/justforu.json'),
+    justforfun: require('../../data/justforfun.json'),
     maternity: require('../../data/maternity.json'),
     vintage_flair: require('../../data/vintage_flair.json'),
-    weddings: require('../../data/weddings.json')
+    special_occasions: require('../../data/special_occasions.json')
 };
 
 export default function Gallery (props) {

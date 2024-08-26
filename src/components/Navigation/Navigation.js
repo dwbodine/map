@@ -130,14 +130,6 @@ export default function Navigation () {
                                             </Link>
                                         </li>
                                         <li
-                                            id="menu-maternity"
-                                            className={getClassName('menu-maternity')}
-                                        >
-                                            <Link to="/gallery/maternity">
-                                                <span>Maternity</span>
-                                            </Link>
-                                        </li>
-                                        <li
                                             id="menu-family"
                                             className={getClassName('menu-family')}
                                         >
@@ -149,8 +141,8 @@ export default function Navigation () {
                                             id="menu-justforu"
                                             className={getClassName('menu-justforu')}
                                         >
-                                            <Link to="/gallery/just-for-you">
-                                                <span>Just For You</span>
+                                            <Link to="/gallery/just-for-fun">
+                                                <span>Just For Fun</span>
                                             </Link>
                                         </li>
                                         <li
@@ -165,8 +157,8 @@ export default function Navigation () {
                                             id="menu-weddings"
                                             className={getClassName('menu-weddings')}
                                         >
-                                            <Link to="/gallery/weddings">
-                                                <span>Weddings</span>
+                                            <Link to="/gallery/special-occasions">
+                                                <span>Special Occasions</span>
                                             </Link>
                                         </li>
                                     </ul>
@@ -204,8 +196,8 @@ export default function Navigation () {
                                             id="menu-fine-art"
                                             className={getClassName('menu-fine-art')}
                                         >
-                                            <Link to="/investments/fine-art">
-                                                <span>Fine Art Prints</span>
+                                            <Link to="/investments/a-la-carte">
+                                                <span>A-la-carte items</span>
                                             </Link>
                                         </li>
                                         <li

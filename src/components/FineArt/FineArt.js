@@ -4,25 +4,11 @@ export default function FineArt () {
     document.title = 'Fine Art Prints - Marie Anna Photography';
     return (
         <div>
-            <h1 className="entry-title">Fine Art Prints</h1>
+            <h1 className="entry-title">A-la-carte menu</h1>
 
             <div className="entry-content">
-                <p>
-          All fine art prints are created using Kodak Endura Professional Papers
-          with your choice of lustre, glossy or metallic finish.
-                </p>
-                <p>Sizes range from 2.5 x 3.5 to 30 x 40.</p>
-                <p>Pricing for my clients’ favorite sizes:</p>
-                <ul>
-                    <li>2 wallets: $10</li>
-                    <li>8 wallets: $14</li>
-                    <li>4 x 6: $8</li>
-                    <li>5 x 7: $12</li>
-                    <li>8 x 10 OR 8 x 12: $27</li>
-                    <li>11 x 14: $50</li>
-                    <li>16 x 20: $80</li>
-                </ul>
-                <p>Other product options:</p>
+                <h1>More coming soon...</h1>
+                <p>Current product options:</p>
                 <ul>
                     <li>Mounting available for most prints</li>
                     <li>Canvas prints</li>

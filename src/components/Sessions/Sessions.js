@@ -9,7 +9,8 @@ export default function Sessions () {
 
             <div className="entry-content">
                 <p>
-                    <strong>Standard Portrait Sessions:</strong>
+                    <strong>Standard Portrait Sessions (includes Children,
+                        Family, Just for Fun and Vintage Flair sessions):</strong>
                 </p>
                 <ul>
                     <li>1-2 hours on location (park, river, home, etc.)</li>

@@ -14,7 +14,7 @@ export default function InvestmentsRouter () {
                 <Route path={`${path}/selecting-photos`}>
                     <SelectingPhotos />
                 </Route>
-                <Route path={`${path}/fine-art`}>
+                <Route path={`${path}/a-la-carte`}>
                     <FineArt />
                 </Route>
                 <Route path={`${path}/`}>
