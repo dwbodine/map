@@ -12,6 +12,7 @@ export default function Navigation () {
     const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
     const [dropChecked, setDropChecked] = useState(false);
     const [galleryDropChecked, setGalleryDropChecked] = useState(false);
+    const [occasionDropChecked, setOccasionDropChecked] = useState(false);
     const [investDropChecked, setInvestDropChecked] = useState(false);
 
     const _menuOnClick = (event) => {
@@ -25,6 +26,8 @@ export default function Navigation () {
                 menuItem = 'menu-children';
             } else if (menuItem === 'menu-investments') {
                 menuItem = 'menu-sessions';
+            } else if (menuItem === 'menu-occasions') {
+                menuItem = 'menu-weddings';
             }
             setSelectedMenuItem(menuItem);
         }
@@ -38,6 +41,7 @@ export default function Navigation () {
         var isChecked = dropChecked === true;
         setDropChecked(!isChecked);
         setGalleryDropChecked(false);
+        setOccasionDropChecked(false);
         setInvestDropChecked(false);
     };
 
@@ -49,6 +53,18 @@ export default function Navigation () {
         setDropChecked(true);
         setInvestDropChecked(false);
         setGalleryDropChecked(!isChecked);
+        setOccasionDropChecked(false);
+    };
+
+    const _toggleOccasions = (event) => {
+        if (event.target.offsetParent.id !== 'menu-occasions') {
+            return;
+        }
+        var isChecked = occasionDropChecked === true;
+        setDropChecked(true);
+        setInvestDropChecked(false);
+        setGalleryDropChecked(true);
+        setOccasionDropChecked(!isChecked);
     };
 
     const _toggleInvest = (event) => {
@@ -153,13 +169,50 @@ export default function Navigation () {
                                                 <span>Vintage Flair</span>
                                             </Link>
                                         </li>
-                                        <li
-                                            id="menu-weddings"
-                                            className={getClassName('menu-weddings')}
-                                        >
-                                            <Link to="/gallery/special-occasions">
-                                                <span>Special Occasions</span>
-                                            </Link>
+                                        <li id="menu-occasions" onClick={_toggleOccasions}>
+                                            <span>Special Occasions</span>
+                                            <span id="occasionToggler">
+                                                <i
+                                                    className={
+                                                        occasionDropChecked ?
+                                                            'fa fa-caret-down' :
+                                                            'fa fa-caret-right'
+                                                    }
+                                                    aria-hidden="true"
+                                                />
+                                            </span>
+                                            <input
+                                                id="occasionDrop"
+                                                type="checkbox"
+                                                checked={occasionDropChecked}
+                                                readOnly
+                                            />
+                                            <ul id="occasionSubMenu">
+                                                <li
+                                                    id="menu-weddings"
+                                                    className={getClassName('menu-weddings')}
+                                                >
+                                                    <Link to="/gallery/weddings">
+                                                        <span>Weddings</span>
+                                                    </Link>
+                                                </li>
+                                                <li
+                                                    id="menu-birthdays"
+                                                    className={getClassName('menu-birthdays')}
+                                                >
+                                                    <Link to="/gallery/birthdays">
+                                                        <span>Birthdays</span>
+                                                    </Link>
+                                                </li>
+                                                <li
+                                                    id="menu-seniors"
+                                                    className={getClassName('menu-seniors')}
+                                                >
+                                                    <Link to="/gallery/seniors">
+                                                        <span>Senior Portraits</span>
+                                                    </Link>
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </li>

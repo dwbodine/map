@@ -21,8 +21,14 @@ export default function GalleryRouter () {
                 <Route path={`${path}/vintage_flair`}>
                     <Gallery title="Vintage Flair" name="vintage_flair" />
                 </Route>
-                <Route path={`${path}/special-occasions`}>
-                    <Gallery title="Special Occasions" name="special_occasions" />
+                <Route path={`${path}/weddings`}>
+                    <Gallery title="Weddings" name="weddings" />
+                </Route>
+                <Route path={`${path}/birthdays`}>
+                    <Gallery title="Birthdays" name="birthdays" />
+                </Route>
+                <Route path={`${path}/seniors`}>
+                    <Gallery title="Senior Portraits" name="seniors" />
                 </Route>
             </Switch>
         </>

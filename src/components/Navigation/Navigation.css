@@ -110,7 +110,18 @@
   text-transform: uppercase;
 }
 
+#menu ul ul li span {
+  color: #faffe3;
+  font-family: "Open Sans", serif;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  background: transparent;
+  text-transform: uppercase;
+}
+
 #menu a:hover,
+#menu ul ul li span:hover, 
 #menu a:active,
 #menu .current_page_item a:link,
 #menu .current_page_item a:visited {
@@ -122,6 +133,15 @@
   position: absolute;
   left: 2px;
   top: 49px;
+  background: darkgray;
+  padding-bottom: 10px;
+}
+
+#menu ul ul ul {
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 2px;
   background: darkgray;
   padding-bottom: 10px;
 }
@@ -141,10 +161,6 @@
   height: 30px;
 }
 
-#menu ul ul li span {
-  font-size: 13px;
-}
-
 #menu i {
   margin-left: 5px;
 }
@@ -156,6 +172,10 @@
 #investToggler,
 #galleryToggler {
   display: none;
+}
+
+#menu #menu-occasions {
+  margin: 12px 0;
 }
 
 @media all and (max-width: 1024px) {
@@ -177,7 +197,8 @@
   }
 
   #investToggler,
-  #galleryToggler {
+  #galleryToggler, 
+  #occasionToggler {
     display: inline;
   }
 
@@ -189,17 +210,30 @@
 
   #menu ul ul li:hover > ul,
   #menu ul li:hover > ul {
-    display: none;
+    display: block;
   }
 
   #menu ul ul li {
     display: block;
     width: 100%;
     background: unset;
+    height: auto;
   }
 
-  #menu ul ul ul li {
+  #menu ul ul ul {
+    display: none;
+    float: none;
     position: static;
+    background: unset;
+    left: 20px;
+    top: 5px;
+    background: darkgray;
+    padding-bottom: 10px;
+  }
+
+  #menu ul ul ul li:hover > ul,
+  #menu ul ul li:hover > ul {
+    display: block;
   }
 
   #menudrop:checked + #mainMenu {
@@ -210,7 +244,15 @@
     display: block;
   }
 
+  #occasionDrop:checked + #occasionSubMenu {
+    display: block;
+  }
+
   #investdrop:checked + #investSubMenu {
     display: block;
+  }
+
+  #menu #occasionSubMenu {
+    margin: 12px 0;
   }
 }

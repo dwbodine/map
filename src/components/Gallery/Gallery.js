@@ -9,7 +9,9 @@ const jsonData = {
     family: require('../../data/family.json'),
     justforfun: require('../../data/justforfun.json'),
     vintage_flair: require('../../data/vintage_flair.json'),
-    special_occasions: require('../../data/special_occasions.json')
+    weddings: require('../../data/weddings.json'),
+    birthdays: require('../../data/birthdays.json'),
+    seniors: require('../../data/seniors.json')
 };
 
 export default function Gallery (props) {
