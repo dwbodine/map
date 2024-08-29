@@ -7,9 +7,9 @@ export default function FineArt () {
             <h1 className="entry-title">A-la-carte menu</h1>
 
             <div className="entry-content">
-                <h1>More coming soon...</h1>
                 <p>Current product options:</p>
                 <ul>
+                    <li>Reproduction rights (most popular item!)</li>
                     <li>Mounting available for most prints</li>
                     <li>Canvas prints</li>
                     <li>Gallery wraps (stretched over a wooden frame)</li>
@@ -20,7 +20,6 @@ export default function FineArt () {
                     <li>Personalized USB thumb drives</li>
                     <li>Image folios</li>
                     <li>Ornaments</li>
-                    <li>Reproduction rights</li>
                 </ul>
                 <p>
           For more information, please contact Marie at{' '}

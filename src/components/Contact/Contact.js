@@ -13,7 +13,7 @@ export default function Contact () {
                     <p>
             owner/operator
                         <br /> Marie Anna Photography
-                        <br /> 916-496-1197
+                        <br /> 803-504-4253
                         <br />
                         <a href="mailto:marie@marieannaphotography.com">
               marie@marieannaphotography.com

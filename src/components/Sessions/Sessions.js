@@ -34,27 +34,7 @@ export default function Sessions () {
                 </ul>
                 <p>
                     <strong>
-            Maternity Portraits
-                        <span className="highlight"> $220.00</span>
-                        <br />
-                    </strong>
-                    <br /> One session at the location of your choice (park, home, river,
-          etc.)
-                    <br /> Package includes:
-                </p>
-                <ul>
-                    <li>
-            One session at the location of your choice (park, home, river, etc.)
-                    </li>
-                    <li>
-            Ten (10) digitally-retouched<sup>*</sup> photos with reproduction rights on personalized USB thumb
-            drive
-                    </li>
-                    <li>Online proofing</li>
-                </ul>
-                <p>
-                    <strong>
-            Senior Portraits
+            Graduate Portraits
                         <span className="highlight"> $350.00</span>
                         <br />
                     </strong>
@@ -74,6 +54,17 @@ export default function Sessions () {
                     drive
                     </li>
                 </ul>
+                <p>
+                    <strong>
+            Weddings
+                    </strong>
+                    <br /><br />
+                    In my 20 years of photography, I've learned that no two weddings are the same.  For example, I've
+                     traveled to Jamaica to shoot a wedding on the beach or gone next door to photograph an intimate
+                      gathering of 25 people in a backyard.  I prefer to meet with each bride and groom so I can
+                      create a wedding package that not only fits their budget, but their style as well.  All
+                      initial wedding consultations are <strong>free</strong>.
+                </p>
             </div>
             <div className="aligncenter">
                 <p className="alignleft">

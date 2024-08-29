@@ -197,19 +197,11 @@ export default function Navigation () {
                                                     </Link>
                                                 </li>
                                                 <li
-                                                    id="menu-birthdays"
-                                                    className={getClassName('menu-birthdays')}
+                                                    id="menu-graduates"
+                                                    className={getClassName('menu-graduates')}
                                                 >
-                                                    <Link to="/gallery/birthdays">
-                                                        <span>Birthdays</span>
-                                                    </Link>
-                                                </li>
-                                                <li
-                                                    id="menu-seniors"
-                                                    className={getClassName('menu-seniors')}
-                                                >
-                                                    <Link to="/gallery/seniors">
-                                                        <span>Senior Portraits</span>
+                                                    <Link to="/gallery/graduates">
+                                                        <span>Graduate Portraits</span>
                                                     </Link>
                                                 </li>
                                             </ul>

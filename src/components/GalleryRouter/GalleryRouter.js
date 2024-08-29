@@ -24,11 +24,8 @@ export default function GalleryRouter () {
                 <Route path={`${path}/weddings`}>
                     <Gallery title="Weddings" name="weddings" />
                 </Route>
-                <Route path={`${path}/birthdays`}>
-                    <Gallery title="Birthdays" name="birthdays" />
-                </Route>
-                <Route path={`${path}/seniors`}>
-                    <Gallery title="Senior Portraits" name="seniors" />
+                <Route path={`${path}/graduates`}>
+                    <Gallery title="Graduate Portraits" name="graduates" />
                 </Route>
             </Switch>
         </>

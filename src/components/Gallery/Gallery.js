@@ -11,7 +11,7 @@ const jsonData = {
     vintage_flair: require('../../data/vintage_flair.json'),
     weddings: require('../../data/weddings.json'),
     birthdays: require('../../data/birthdays.json'),
-    seniors: require('../../data/seniors.json')
+    graduates: require('../../data/seniors.json')
 };
 
 export default function Gallery (props) {
