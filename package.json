@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode development",
-    "format": "prettier --write \"src/**/*.js\"",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "build": "webpack --mode production",
     "s3-clean": "aws s3 rm s3://marieannaphotography.com --recursive --exclude '*' --include 'main*'",

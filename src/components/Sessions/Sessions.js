@@ -15,7 +15,7 @@ export default function Sessions () {
                 <ul>
                     <li>1-2 hours on location (park, river, home, etc.)</li>
                     <li>
-            Individual or small group (4 people) <strong>$160.00</strong>
+            Individual or small group (4 people) <strong>$180.00</strong>
                     </li>
                     <li>
             Additional people <strong>$10.00</strong>
