@@ -1,7 +1,8 @@
 // GalleryRouter.tsx
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Gallery from '../Gallery/Gallery';
+import React from 'react';
+
+import Gallery from '@/components/Gallery/Gallery';
 
 const GalleryRouter: React.FC = () => {
   return (

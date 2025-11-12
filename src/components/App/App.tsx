@@ -1,9 +1,9 @@
 // App.tsx
 import React from 'react';
-import './App.css';
+import '../App/App.css';
 
-import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
+import Navigation from '@/components/Navigation/Navigation';
+import Footer from '@/components/Footer/Footer';
 
 const App: React.FC = () => {
   return (

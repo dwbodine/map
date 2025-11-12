@@ -1,11 +1,13 @@
 // index.tsx
+import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
-import 'core-js/stable';
 import { createRoot } from 'react-dom/client';
+
+import App from '@/components/App/App';
+
+import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './index.css';
-import App from './components/App/App';
-import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root');
 if (!container) throw new Error('Root element not found');
@@ -26,7 +28,7 @@ if (import.meta && import.meta.hot) {
 } else if (module && module.hot) {
   // This branch is for Webpack HMR
   module.hot.accept('./components/App/App', () => {
-    const NextApp = require('./components/App/App').default;
+    const NextApp = App;
     root.render(
       <React.StrictMode>
         <NextApp />

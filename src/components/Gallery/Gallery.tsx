@@ -1,14 +1,16 @@
 // Gallery.tsx
 import { Fade, SlideshowRef } from 'react-slideshow-image';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import 'react-slideshow-image/dist/styles.css';
 import './Gallery.css';
 
-// Strong typing for gallery image objects
-interface GalleryImage {
-  imageName: string;
-  [key: string]: unknown;
-}
+import children from '../../data/children.json' with { type: 'json' };
+import family from '../../data/family.json' with { type: 'json' };
+import justforfun from '../../data/justforfun.json' with { type: 'json' };
+import vintage_flair from '../../data/vintage_flair.json' with { type: 'json' };
+import weddings from '../../data/weddings.json' with { type: 'json' };
+import birthdays from '../../data/birthdays.json' with { type: 'json' };
+import graduates from '../../data/seniors.json' with { type: 'json' };
 
 interface GalleryProps {
   title: string;
@@ -22,15 +24,15 @@ interface GalleryProps {
     | 'graduates';
 }
 
-const jsonData: Record<GalleryProps['name'], GalleryImage[]> = {
-  children: require('../../data/children.json'),
-  family: require('../../data/family.json'),
-  justforfun: require('../../data/justforfun.json'),
-  vintage_flair: require('../../data/vintage_flair.json'),
-  weddings: require('../../data/weddings.json'),
-  birthdays: require('../../data/birthdays.json'),
-  graduates: require('../../data/seniors.json'),
-};
+const jsonData = {
+  children,
+  family,
+  justforfun,
+  vintage_flair,
+  weddings,
+  birthdays,
+  graduates,
+} as const;
 
 const Gallery: React.FC<GalleryProps> = ({ title, name }) => {
   const slideRef = React.useRef<SlideshowRef | null>(null);

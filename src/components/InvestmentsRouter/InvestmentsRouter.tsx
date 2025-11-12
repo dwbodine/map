@@ -2,9 +2,9 @@
 import React from 'react';
 import { Routes, Route, useMatch } from 'react-router-dom';
 
-import Sessions from '../Sessions/Sessions';
-import FineArt from '../FineArt/FineArt';
-import SelectingPhotos from '../SelectingPhotos/SelectingPhotos';
+import Sessions from '@/components/Sessions/Sessions';
+import FineArt from '@/components/FineArt/FineArt';
+import SelectingPhotos from '@/components/SelectingPhotos/SelectingPhotos';
 
 const InvestmentsRouter: React.FC = () => {
   // useMatch provides a cleaner base for nested routes in v7

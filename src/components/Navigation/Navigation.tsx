@@ -2,11 +2,11 @@
 import React, { useState, MouseEvent } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import Home from '../Home/Home';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import GalleryRouter from '../GalleryRouter/GalleryRouter';
-import InvestmentsRouter from '../InvestmentsRouter/InvestmentsRouter';
+import Home from '@/components/Home/Home';
+import About from '@/components/About/About';
+import Contact from '@/components/Contact/Contact';
+import GalleryRouter from '@/components/GalleryRouter/GalleryRouter';
+import InvestmentsRouter from '@/components/InvestmentsRouter/InvestmentsRouter';
 
 import './Header.css';
 import './Navigation.css';

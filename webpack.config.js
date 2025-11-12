@@ -5,11 +5,15 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import AssetsPlugin from 'assets-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-
-const __dirname = path.resolve();
-const isDev = process.env.NODE_ENV !== 'production';
+import { fileURLToPath } from 'url';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 const require = createRequire(import.meta.url);
+const isDev = process.env.NODE_ENV !== 'production';
+
+// Fix for ES modules (no __dirname)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type {import('webpack').Configuration} */
 export default {
@@ -21,11 +25,14 @@ export default {
     filename: isDev ? '[name]-bundle.js' : '[name]-bundle-[contenthash].js',
     publicPath: '/',
     clean: true,
-    assetModuleFilename: 'assets/[hash][ext][query]'
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
 
   devtool: isDev ? 'eval-source-map' : 'source-map',
@@ -37,7 +44,7 @@ export default {
         port: 3000,
         historyApiFallback: true,
         open: true,
-        hot: true
+        hot: true,
       }
     : undefined,
 
@@ -50,27 +57,27 @@ export default {
           loader: 'babel-loader',
           options: {
             cacheDirectory: true,
-            plugins: [
-              isDev && require.resolve('react-refresh/babel')
-            ].filter(Boolean)
-          }
-        }
+            plugins: [isDev && require.resolve('react-refresh/babel')].filter(
+              Boolean
+            ),
+          },
+        },
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource'
-      }
-    ]
+        type: 'asset/resource',
+      },
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('public/index.html'),
-      favicon: path.resolve('public/favicon.ico'),
+      template: path.resolve(__dirname, 'public/index.html'),
+      favicon: path.resolve(__dirname, 'public/favicon.ico'),
       minify: !isDev && {
         collapseWhitespace: true,
         removeComments: true,
@@ -81,20 +88,24 @@ export default {
         keepClosingSlash: true,
         minifyCSS: true,
         minifyJS: true,
-        minifyURLs: true
-      }
+        minifyURLs: true,
+      },
     }),
 
     new AssetsPlugin({
       filename: 'webpack-assets.json',
-      path: __dirname
+      path: __dirname,
     }),
 
     isDev && new ReactRefreshWebpackPlugin(),
 
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(isDev ? 'development' : 'production')
-    })
+      'process.env.NODE_ENV': JSON.stringify(
+        isDev ? 'development' : 'production'
+      ),
+    }),
+
+    new ForkTsCheckerWebpackPlugin(),
   ].filter(Boolean),
 
   optimization: {
@@ -105,13 +116,11 @@ export default {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
-        }
-      }
+          chunks: 'all',
+        },
+      },
     },
-    runtimeChunk: {
-      name: 'runtime'
-    }
+    runtimeChunk: { name: 'runtime' },
   },
 
   performance: { hints: false },
@@ -120,6 +129,6 @@ export default {
     assets: true,
     modules: false,
     entrypoints: false,
-    children: false
-  }
+    children: false,
+  },
 };
