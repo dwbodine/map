@@ -15,8 +15,8 @@ const Sessions: React.FC = () => {
       <div className="entry-content">
         <p>
           <strong>
-            Standard Portrait Sessions (includes Children, Family, Just for Fun and Vintage Flair
-            sessions):
+            Standard Portrait Sessions (includes Children, Family, Just for Fun
+            and Vintage Flair sessions):
           </strong>
         </p>
         <ul>
@@ -42,12 +42,14 @@ const Sessions: React.FC = () => {
           <br /> Session includes:
         </p>
         <ul>
-          <li>One session at the location of your choice (park, home, river, etc.)</li>
+          <li>
+            One session at the location of your choice (park, home, river, etc.)
+          </li>
           <li>Two wardrobe changes</li>
           <li>Online proofing</li>
           <li>
-            Ten (10) digitally retouched<sup>*</sup> photos with reproduction rights on a personalized
-            USB thumb drive
+            Ten (10) digitally retouched<sup>*</sup> photos with reproduction
+            rights on a personalized USB thumb drive
           </li>
         </ul>
 
@@ -55,22 +57,25 @@ const Sessions: React.FC = () => {
           <strong>Weddings</strong>
           <br />
           <br />
-          In my 20 years of photography, I&apos;ve learned that no two weddings are the same. For
-          example, I&apos;ve traveled to Jamaica to shoot a wedding on the beach or gone next door to
-          photograph an intimate gathering of 25 people in a backyard. I prefer to meet with each bride
-          and groom so I can create a wedding package that not only fits their budget but their style as
-          well. All initial wedding consultations are <strong>free</strong>.
+          In my 20 years of photography, I&apos;ve learned that no two weddings
+          are the same. For example, I&apos;ve traveled to Jamaica to shoot a
+          wedding on the beach or gone next door to photograph an intimate
+          gathering of 25 people in a backyard. I prefer to meet with each bride
+          and groom so I can create a wedding package that not only fits their
+          budget but their style as well. All initial wedding consultations are{' '}
+          <strong>free</strong>.
         </p>
       </div>
 
       <div className="aligncenter">
         <p className="alignleft">
           <span className="highlight">
-            A $50.00 deposit is required in advance of your session in order to reserve your date –
-            cash or credit cards ONLY please, either over the phone or in person. We understand that
-            emergencies come up and sometimes life happens, but we require 72 HOURS NOTICE on any and
-            all cancellations. Without a 72-hour notice of cancellation, the $50.00 deposit will become
-            NON-REFUNDABLE.
+            A $50.00 deposit is required in advance of your session in order to
+            reserve your date – cash or credit cards ONLY please, either over
+            the phone or in person. We understand that emergencies come up and
+            sometimes life happens, but we require 72 HOURS NOTICE on any and
+            all cancellations. Without a 72-hour notice of cancellation, the
+            $50.00 deposit will become NON-REFUNDABLE.
             <br />
             <br />
           </span>
@@ -80,19 +85,21 @@ const Sessions: React.FC = () => {
             <br />
           </strong>
           <strong>
-            All portrait packages include: uploading costs to view proofs, editing and custom designs,
-            local travel.
+            All portrait packages include: uploading costs to view proofs,
+            editing and custom designs, local travel.
             <br />
             <br />
           </strong>
           <strong>
-            Additional travel fees may apply outside of the Charlotte Metro area.
+            Additional travel fees may apply outside of the Charlotte Metro
+            area.
           </strong>
         </p>
       </div>
 
       <p>
-        <sup>*</sup>Digital retouching includes removal of scars, blemishes, etc.
+        <sup>*</sup>Digital retouching includes removal of scars, blemishes,
+        etc.
       </p>
     </section>
   );

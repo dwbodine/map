@@ -8,7 +8,7 @@
 
 #header:before,
 #header:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -24,7 +24,7 @@
 
 #masthead:before,
 #masthead:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -58,7 +58,7 @@
 
 #branding h1 {
   font-size: 34px;
-  font-family: "Dancing Script", serif;
+  font-family: 'Dancing Script', serif;
   color: darkgray;
   line-height: 36px;
   border: 0;
@@ -73,7 +73,7 @@
 #branding .description {
   font-size: 32px;
   font-weight: bold;
-  font-family: "Open Sans", serif;
+  font-family: 'Open Sans', serif;
   color: #faffe3;
   text-transform: uppercase;
   text-decoration: none;

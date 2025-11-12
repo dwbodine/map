@@ -14,8 +14,8 @@ const SelectingPhotos: React.FC = () => {
 
       <div className="entry-content">
         <p>
-          Roughly a week after your session, I will send you a secure link from my favorite
-          online proofing website{' '}
+          Roughly a week after your session, I will send you a secure link from
+          my favorite online proofing website{' '}
           <a
             href="https://pixieset.com/"
             target="_blank"
@@ -24,23 +24,24 @@ const SelectingPhotos: React.FC = () => {
           >
             pixieset.com
           </a>
-          , which is both mobile-friendly and supports social sharing. When viewing on Pixieset,
-          please keep in mind:
+          , which is both mobile-friendly and supports social sharing. When
+          viewing on Pixieset, please keep in mind:
         </p>
 
         <ul>
           <li>
-            For your security and copyright protection, each session requires a password, and
-            all images are watermarked with “Marie Anna Photography”.
+            For your security and copyright protection, each session requires a
+            password, and all images are watermarked with “Marie Anna
+            Photography”.
           </li>
           <li>These are just proofs, not fully retouched images.</li>
           <li>
-            To select your photos, click “favorite” on your chosen images and Pixieset will
-            automatically create a favorites folder.
+            To select your photos, click “favorite” on your chosen images and
+            Pixieset will automatically create a favorites folder.
           </li>
           <li>
-            Please notify me once your folder is complete, as I do not receive automatic
-            notifications from Pixieset.
+            Please notify me once your folder is complete, as I do not receive
+            automatic notifications from Pixieset.
           </li>
           <li>
             After your final selection and order, your proof album on Pixieset

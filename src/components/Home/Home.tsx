@@ -25,6 +25,6 @@ const Home: React.FC = () => {
       </figure>
     </div>
   );
-}
+};
 
 export default Home;

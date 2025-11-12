@@ -13,7 +13,10 @@ const InvestmentsRouter: React.FC = () => {
 
   return (
     <Routes>
-      <Route path={`${basePath}/selecting-photos`} element={<SelectingPhotos />} />
+      <Route
+        path={`${basePath}/selecting-photos`}
+        element={<SelectingPhotos />}
+      />
       <Route path={`${basePath}/a-la-carte`} element={<FineArt />} />
       <Route path={`${basePath}/`} element={<Sessions />} />
     </Routes>
