@@ -11,6 +11,8 @@ import InvestmentsRouter from '@/components/InvestmentsRouter/InvestmentsRouter'
 
 import './Header.css';
 import './Navigation.css';
+import Galleries from '../Galleries/Galleries';
+import Investments from '../Investments/Investments';
 
 const Navigation: React.FC = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
@@ -127,8 +129,10 @@ const Navigation: React.FC = () => {
               <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/galleries" element={<Galleries />} />
                 <Route path="/gallery/*" element={<GalleryRouter />} />
-                <Route path="/investments/*" element={<InvestmentsRouter />} />
+                <Route path="/investments" element={<Investments />} />
+                <Route path="/investment/*" element={<InvestmentsRouter />} />
                 <Route path="/" element={<Home />} />
               </Routes>
             </div>
