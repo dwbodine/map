@@ -3,16 +3,16 @@ import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import React, { useState, MouseEvent } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import Home from '@/components/Home/Home';
 import About from '@/components/About/About';
 import Contact from '@/components/Contact/Contact';
+import Home from '@/components/Home/Home';
+import Galleries from '@/components/Galleries/Galleries';
 import GalleryRouter from '@/components/GalleryRouter/GalleryRouter';
+import Investments from '@/components/Investments/Investments';
 import InvestmentsRouter from '@/components/InvestmentsRouter/InvestmentsRouter';
 
 import './Header.css';
 import './Navigation.css';
-import Galleries from '../Galleries/Galleries';
-import Investments from '../Investments/Investments';
 
 const Navigation: React.FC = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
@@ -64,8 +64,16 @@ const Navigation: React.FC = () => {
           </ul>
         </div>
         <div className="social-contact">
-          <a href="mailto:marie@marieannaphotography.com" aria-label="Email Marie Anna Photography" className="icoEmail"><FaEnvelope /></a>
-          <a href="tel:+18035044253" aria-label="Call Marie Anna Photography">(803) 504-4253</a>
+          <a
+            href="mailto:marie@marieannaphotography.com"
+            aria-label="Email Marie Anna Photography"
+            className="icoEmail"
+          >
+            <FaEnvelope />
+          </a>
+          <a href="tel:+18035044253" aria-label="Call Marie Anna Photography">
+            (803) 504-4253
+          </a>
         </div>
       </div>
       <div id="masthead">
