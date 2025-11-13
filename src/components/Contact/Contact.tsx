@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
 
       <div className="entry-content">
         <article className="contact-card">
-          <h2>Marie Anna Bosker</h2>
+          <h2>MARIE ANNA BOSKER</h2>
           <p>
             <span className="role">Owner / Operator</span>
             <br />

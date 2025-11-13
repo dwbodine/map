@@ -64,8 +64,8 @@ const Navigation: React.FC = () => {
           </ul>
         </div>
         <div className="social-contact">
-          <a href="mailto:marie@marieannaphotography.com" className="icoEmail"><FaEnvelope /></a>
-          <a href="tel:8035044253">(803) 504-4253</a>
+          <a href="mailto:marie@marieannaphotography.com" aria-label="Email Marie Anna Photography" className="icoEmail"><FaEnvelope /></a>
+          <a href="tel:+18035044253" aria-label="Call Marie Anna Photography">(803) 504-4253</a>
         </div>
       </div>
       <div id="masthead">

@@ -1,7 +1,6 @@
 // Footer.tsx
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -12,10 +11,6 @@ const Footer: React.FC = () => {
         <div id="footer">
           <p>
             &copy; 2007–{currentYear} Marie Anna Photography
-            <br />
-            <Link to="/contact" aria-label="Contact Marie Anna Photography">
-              Contact Us
-            </Link>
           </p>
         </div>
       </div>
