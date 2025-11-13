@@ -5,7 +5,7 @@ import './Galleries.css';
 const Galleries: React.FC = () => {
 
   return (
-    <div>Galleries</div>
+    <section>Galleries</section>
   );
 };
 

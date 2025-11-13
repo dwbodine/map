@@ -389,3 +389,7 @@ a:active {
   font-family: 'Playwrite FR Trad', 'Open Sans', sans-serif;
   color: black;
 }
+
+section {
+  min-height: 65vh;
+}

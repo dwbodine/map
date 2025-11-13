@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/marieannaphotography"
+                href="https://www.instagram.com/marieannaphotos"
                 target="_blank"
                 rel="noreferrer"
                 className="icoInstagram"

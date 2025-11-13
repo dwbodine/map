@@ -5,7 +5,7 @@ import './Investments.css';
 const Investments: React.FC = () => {
 
   return (
-    <div>Investments</div>
+    <section>Investments</section>
   );
 };
 

@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="entry-content">
+    <section className="entry-content">
       <figure className="aligncenter">
         <img
           src="img/cover.jpg"
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           height={autoSize()}
         />
       </figure>
-    </div>
+    </section>
   );
 };
 
