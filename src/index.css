@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'Dancing Script';
@@ -259,7 +261,7 @@ body {
   min-height: 100%;
   margin: 0;
   font-family:
-    'Open Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Lato', 'Open Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -278,7 +280,7 @@ pre {
 h1 {
   /* The H1 tag is used for page titles, and post titles on blog page. */
   font-size: 30px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Lato', 'Open Sans', serif;
   color: #2e2e2e;
   text-decoration: none;
   clear: none;
@@ -300,7 +302,7 @@ h1.page-title {
 h2 {
   /* The H2 tag is used for post titles */
   font-size: 26px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Lato', 'Open Sans', serif;
   color: #2e2e2e;
   text-decoration: none;
   clear: none;
@@ -318,7 +320,7 @@ h2 a:visited {
 
 h3 {
   font-size: 24px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Lato', 'Open Sans', serif;
   color: #2e2e2e;
   text-decoration: none;
   clear: none;
@@ -336,7 +338,7 @@ h3 a:visited {
 
 h4 {
   font-size: 22px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Lato', 'Open Sans', serif;
   color: #2e2e2e;
   text-decoration: none;
   clear: none;
@@ -354,7 +356,7 @@ h4 a:visited {
 
 h5 {
   font-size: 20px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Lato', 'Open Sans', serif;
   text-decoration: none;
   color: #2e2e2e;
   clear: none;

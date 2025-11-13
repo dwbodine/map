@@ -11,7 +11,7 @@
   width: auto;
   padding: 5px 0;
   text-align: center;
-  background: darkgray;
+  background: #F25252;
   min-height: 65px;
   clear: both;
   z-index: 2;
@@ -26,13 +26,13 @@
   padding-top: 5px;
   color: #ffffff;
   font-size: 10px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Lato', 'Open Sans', serif;
 }
 
 #footer a {
   /* This sets the color of the footer links */
-  color: black;
-  font-size: 30px;
+  color: #ffffff;
+  font-size: 24px;
   font-weight: bold;
 }
 

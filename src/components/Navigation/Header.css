@@ -1,35 +1,96 @@
 #header {
-  background-color: darkgray;
-  width: auto;
+  background-color: #ffffff;
+  width: 100%;
   min-height: 60px;
-  position: static;
+  display: block;
   margin-bottom: 10px;
 }
 
-#header:before,
-#header:after {
-  content: ' ';
-  display: table;
+.social-border {
+  width: 100%;
+  color: #ffffff;
+  background-color: #F25252;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#header:after {
-  clear: both;
+.social-network-container {
+  display: flex;
+  align-items: left;
+  margin: 0;
+}
+
+ul.social-network {
+  list-style: none;
+  display: flex;
+  padding: 0 10px;
+  flex-direction: row;
+}
+
+ul.social-network li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.social-circle li a {
+  display: flex;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.social-network a.icoInstagram:hover {
+  background: -webkit-radial-gradient(50px 220px,
+      #ffda75 18%,
+      #ff3a49 43%,
+      #ff3a49 50%,
+      #e518a1 70%,
+      #6634e1 100%);
+}
+
+.social-network a.icoFacebook:hover {
+  color: #ffffff;
+  background-color: #3b5998;
+}
+
+.social-contact {
+  padding: 0 10px;
+  justify-content: end;
+  display: flex;
+  flex-direction: row;
+}
+
+.social-contact a:link, .social-contact a:visited {
+  display: flex;
+  font-family: 'Montserrat', 'Open Sans', serif;
+  color: #FFFFFF;
+  margin: 0 0 0 15px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.social-contact a.icoEmail {
+  align-items: center;
+}
+
+.social-contact a:hover {
+  color:#F25252;
+  background-color: #FFFFFF;
 }
 
 #masthead {
   width: auto;
   margin: 5px auto 0 auto;
-  position: relative;
-}
-
-#masthead:before,
-#masthead:after {
-  content: ' ';
-  display: table;
-}
-
-#masthead:after {
-  clear: both;
 }
 
 #branding {
@@ -37,7 +98,6 @@
   width: 100%;
   text-align: center;
   margin: 0px 0 0px 0;
-  height: 24px;
 }
 
 #branding #blog-title {
@@ -73,7 +133,7 @@
 #branding .description {
   font-size: 32px;
   font-weight: bold;
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', 'Open Sans', serif;
   color: #faffe3;
   text-transform: uppercase;
   text-decoration: none;
