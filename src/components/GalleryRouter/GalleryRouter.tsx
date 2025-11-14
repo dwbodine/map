@@ -3,13 +3,15 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 
 import Gallery from '@/components/Gallery/Gallery';
+import NewGallery from '@/components/NewGallery/NewGallery';
+import childrenPhotos from '@/data/children';
 
 const GalleryRouter: React.FC = () => {
   return (
     <Routes>
       <Route
         path="children"
-        element={<Gallery title="Children" name="children" />}
+        element={<NewGallery title="Children" name="children" photos={childrenPhotos} />}
       />
       <Route path="family" element={<Gallery title="Family" name="family" />} />
       <Route
@@ -27,6 +29,14 @@ const GalleryRouter: React.FC = () => {
       <Route
         path="graduates"
         element={<Gallery title="Graduate Portraits" name="graduates" />}
+      />
+      <Route
+        path="maternity"
+        element={<Gallery title="Maternity" name="maternity" />}
+      />
+      <Route
+        path="special"
+        element={<Gallery title="Special Occasions" name="special" />}
       />
     </Routes>
   );

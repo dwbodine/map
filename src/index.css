@@ -386,8 +386,9 @@ a:active {
 }
 
 .entry-title {
+  text-align: center;
   font-family: 'Playwrite FR Trad', 'Open Sans', sans-serif;
-  color: black;
+  color: #f25252;
 }
 
 section {

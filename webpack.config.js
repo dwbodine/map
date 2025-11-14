@@ -43,7 +43,7 @@ export default {
         host: 'localhost',
         port: 3000,
         historyApiFallback: true,
-        open: true,
+        open: false,
         hot: true,
       }
     : undefined,

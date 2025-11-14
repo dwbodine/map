@@ -1,0 +1,41 @@
+.investments-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.investment-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.investment-card {
+    flex: 1 1 250px;
+    max-width: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.investment-card:hover {
+    opacity: 0.5;
+}
+
+.investment-card a {
+    text-decoration: none;
+}
+
+.investment-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .investment-card {
+        flex: 0 1 100%;
+    }
+}

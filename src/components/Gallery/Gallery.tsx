@@ -11,6 +11,8 @@ import vintage_flair from '../../data/vintage_flair.json' with { type: 'json' };
 import weddings from '../../data/weddings.json' with { type: 'json' };
 import birthdays from '../../data/birthdays.json' with { type: 'json' };
 import graduates from '../../data/seniors.json' with { type: 'json' };
+import special from '../../data/special.json' with { type: 'json' };
+import maternity from '../../data/maternity.json' with { type: 'json' };
 
 interface GalleryProps {
   title: string;
@@ -21,7 +23,9 @@ interface GalleryProps {
     | 'vintage_flair'
     | 'weddings'
     | 'birthdays'
-    | 'graduates';
+    | 'graduates'
+    | 'special'
+    | 'maternity';
 }
 
 const jsonData = {
@@ -32,6 +36,8 @@ const jsonData = {
   weddings,
   birthdays,
   graduates,
+  special,
+  maternity,
 } as const;
 
 const Gallery: React.FC<GalleryProps> = ({ title, name }) => {

@@ -20,7 +20,7 @@ const Sessions: React.FC = () => {
           </strong>
         </p>
         <ul>
-          <li>1–2 hours on location (park, river, home, etc.)</li>
+          <li>1-2 hours on location (park, river, home, etc.)</li>
           <li>
             Individual or small group (4 people) <strong>$180.00</strong>
           </li>
@@ -71,7 +71,7 @@ const Sessions: React.FC = () => {
         <p className="alignleft">
           <span className="highlight">
             A $50.00 deposit is required in advance of your session in order to
-            reserve your date – cash or credit cards ONLY please, either over
+            reserve your date - cash or credit cards ONLY please, either over
             the phone or in person. We understand that emergencies come up and
             sometimes life happens, but we require 72 HOURS NOTICE on any and
             all cancellations. Without a 72-hour notice of cancellation, the

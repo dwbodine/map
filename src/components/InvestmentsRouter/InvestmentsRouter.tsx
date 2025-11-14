@@ -1,24 +1,17 @@
 // InvestmentsRouter.tsx
 import React from 'react';
-import { Routes, Route, useMatch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Sessions from '@/components/Sessions/Sessions';
 import FineArt from '@/components/FineArt/FineArt';
 import SelectingPhotos from '@/components/SelectingPhotos/SelectingPhotos';
 
 const InvestmentsRouter: React.FC = () => {
-  // useMatch provides a cleaner base for nested routes in v7
-  const match = useMatch('/investments/*');
-  const basePath = match?.pathnameBase || '/investments';
-
   return (
     <Routes>
-      <Route
-        path={`${basePath}/selecting-photos`}
-        element={<SelectingPhotos />}
-      />
-      <Route path={`${basePath}/a-la-carte`} element={<FineArt />} />
-      <Route path={`${basePath}/`} element={<Sessions />} />
+      <Route path="sessions" element={<Sessions />} />
+      <Route path="selecting-photos" element={<SelectingPhotos />} />
+      <Route path="a-la-carte" element={<FineArt />} />
     </Routes>
   );
 };

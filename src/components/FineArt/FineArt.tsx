@@ -9,7 +9,7 @@ const FineArt: React.FC = () => {
 
   return (
     <section className="fineart-page">
-      <h1 className="entry-title">A-la-carte Menu</h1>
+      <h1 className="entry-title">À la carte Menu</h1>
 
       <div className="entry-content">
         <p>Current product options:</p>
