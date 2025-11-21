@@ -15,6 +15,11 @@ import './Navigation.css';
 const Navigation: React.FC = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
 
+  const closeMobileMenu = () => {
+    const checkbox = document.getElementById('menudrop') as HTMLInputElement;
+    if (checkbox) checkbox.checked = false;
+  };
+
   const handleMenuClick = (event: MouseEvent<HTMLUListElement>) => {
     let li = event.target as HTMLElement | null;
     while (li && li.tagName.toLowerCase() !== 'li' && li.parentElement) {
@@ -26,6 +31,9 @@ const Navigation: React.FC = () => {
       else if (menuItem === 'menu-investments') menuItem = 'menu-sessions';
       else if (menuItem === 'menu-occasions') menuItem = 'menu-weddings';
       setSelectedMenuItem(menuItem);
+
+      // CLOSE SLIDE-OVER PANEL AFTER CLICK
+      closeMobileMenu();
     }
   };
 
@@ -35,11 +43,9 @@ const Navigation: React.FC = () => {
   return (
     <>
       <header id="header">
-        {/* SOCIAL BAR */}
         <div className="social-border">
-          {/* NEW: HAMBURGER ON TOP-LEFT */}
           <div className="mobile-hamburger">
-            <label htmlFor="menudrop">
+            <label htmlFor="menudrop" aria-label="Open navigation menu">
               <div className="menu-toggler-icon">
                 <div className="toggler-line first-line" />
                 <div className="toggler-line" />
@@ -48,7 +54,6 @@ const Navigation: React.FC = () => {
             </label>
           </div>
 
-          {/* Social Icons */}
           <div className="social-network-container">
             <ul className="social-network social-circle">
               <li>
@@ -76,7 +81,6 @@ const Navigation: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="social-contact">
             <a
               href="mailto:marie@marieannaphotography.com"
@@ -91,7 +95,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* LOGO AREA */}
         <div id="masthead">
           <div id="branding">
             <div id="blog-title">
@@ -101,43 +104,52 @@ const Navigation: React.FC = () => {
             </div>
           </div>
 
-          {/* NAVIGATION MENU */}
           <nav id="menu_wrapper">
             <div id="menu">
-              {/* CHECKBOX FOR MOBILE MENU — MUST NOT BE READONLY */}
               <input id="menudrop" type="checkbox" />
 
-              <ul id="mainMenu" onClick={handleMenuClick}>
-                <li id="menu-home" className={getClassName('menu-home')}>
-                  <Link to="/">Home</Link>
-                </li>
+              <div className="mobile-nav-overlay">
+                <div className="mobile-nav-panel">
+                  <label
+                    htmlFor="menudrop"
+                    className="mobile-nav-close"
+                    aria-label="Close navigation menu"
+                  >
+                    ×
+                  </label>
 
-                <li id="menu-about" className={getClassName('menu-about')}>
-                  <Link to="/about">About</Link>
-                </li>
+                  <ul id="mainMenu" onClick={handleMenuClick}>
+                    <li id="menu-home" className={getClassName('menu-home')}>
+                      <Link to="/" onClick={closeMobileMenu}>Home</Link>
+                    </li>
 
-                <li id="menu-galleries">
-                  <Link to="/galleries">
-                    <span>Galleries</span>
-                  </Link>
-                </li>
+                    <li id="menu-about" className={getClassName('menu-about')}>
+                      <Link to="/about" onClick={closeMobileMenu}>About</Link>
+                    </li>
 
-                <li id="menu-investments">
-                  <Link to="/investments">
-                    <span>Investments</span>
-                  </Link>
-                </li>
+                    <li id="menu-galleries">
+                      <Link to="/galleries" onClick={closeMobileMenu}>
+                        <span>Galleries</span>
+                      </Link>
+                    </li>
 
-                <li id="menu-contact" className={getClassName('menu-contact')}>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
+                    <li id="menu-investments">
+                      <Link to="/investments" onClick={closeMobileMenu}>
+                        <span>Investments</span>
+                      </Link>
+                    </li>
+
+                    <li id="menu-contact" className={getClassName('menu-contact')}>
+                      <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </nav>
         </div>
       </header>
 
-      {/* ROUTER OUTLET */}
       <main id="wrapper">
         <div id="wrapper-content-spacer" />
         <div id="main">
