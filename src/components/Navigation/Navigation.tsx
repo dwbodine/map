@@ -10,7 +10,6 @@ import GalleryRouter from '@/components/GalleryRouter/GalleryRouter';
 import Investments from '@/components/Investments/Investments';
 import InvestmentsRouter from '@/components/InvestmentsRouter/InvestmentsRouter';
 
-import './Header.css';
 import './Navigation.css';
 
 const Navigation: React.FC = () => {
