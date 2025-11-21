@@ -150,4 +150,10 @@ ul.social-network li {
   #branding .description {
     font-size: 24px;
   }
+
+  .social-border {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

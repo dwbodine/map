@@ -1,4 +1,3 @@
-// Navigation.tsx
 import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import React, { useState, MouseEvent } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
@@ -35,100 +34,111 @@ const Navigation: React.FC = () => {
     menuItem === selectedMenuItem ? 'current_page_item' : '';
 
   return (
-    <header id="header">
-      <div className="social-border">
-        <div className="social-network-container">
-          <ul className="social-network social-circle">
-            <li>
-              <a
-                href="https://www.facebook.com/marieannaphotography"
-                target="_blank"
-                rel="noreferrer"
-                className="icoFacebook"
-                title="Facebook"
-              >
-                <FaFacebook />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/marieannaphotos"
-                target="_blank"
-                rel="noreferrer"
-                className="icoInstagram"
-                title="Instagram"
-              >
-                <FaInstagram />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="social-contact">
-          <a
-            href="mailto:marie@marieannaphotography.com"
-            aria-label="Email Marie Anna Photography"
-            className="icoEmail"
-          >
-            <FaEnvelope />
-          </a>
-          <a href="tel:+18035044253" aria-label="Call Marie Anna Photography">
-            (803) 504-4253
-          </a>
-        </div>
-      </div>
-      <div id="masthead">
-        <div id="branding">
-          <div id="blog-title">
-            <a href="/" title="Marie Anna Photography" rel="home">
-              <img src="/img/name_logo.jpg" />
+    <>
+      <header id="header">
+        {/* SOCIAL BAR */}
+        <div className="social-border">
+          {/* NEW: HAMBURGER ON TOP-LEFT */}
+          <div className="mobile-hamburger">
+            <label htmlFor="menudrop">
+              <div className="menu-toggler-icon">
+                <div className="toggler-line first-line" />
+                <div className="toggler-line" />
+                <div className="toggler-line last-line" />
+              </div>
+            </label>
+          </div>
+
+          {/* Social Icons */}
+          <div className="social-network-container">
+            <ul className="social-network social-circle">
+              <li>
+                <a
+                  href="https://www.facebook.com/marieannaphotography"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icoFacebook"
+                  title="Facebook"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/marieannaphotos"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icoInstagram"
+                  title="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="social-contact">
+            <a
+              href="mailto:marie@marieannaphotography.com"
+              aria-label="Email Marie Anna Photography"
+              className="icoEmail"
+            >
+              <FaEnvelope />
+            </a>
+            <a href="tel:+18035044253" aria-label="Call Marie Anna Photography">
+              (803) 504-4253
             </a>
           </div>
         </div>
 
-        <nav id="menu_wrapper">
-          <div id="menu">
-            <div className="navigation-menu-toggler">
-              <a href="#">
-                <div className="menu-toggler-icon">
-                  <div className="toggler-line first-line" />
-                  <div className="toggler-line" />
-                  <div className="toggler-line last-line" />
-                </div>
+        {/* LOGO AREA */}
+        <div id="masthead">
+          <div id="branding">
+            <div id="blog-title">
+              <a href="/" title="Marie Anna Photography" rel="home">
+                <img src="/img/name_logo.jpg" />
               </a>
             </div>
-
-            <input id="menudrop" type="checkbox" readOnly />
-
-            <ul id="mainMenu" onClick={handleMenuClick}>
-              <li id="menu-home" className={getClassName('menu-home')}>
-                <Link to="/">Home</Link>
-              </li>
-              <li id="menu-about" className={getClassName('menu-about')}>
-                <Link to="/about">About</Link>
-              </li>
-
-              {/* Galleries */}
-              <li id="menu-galleries">
-                <Link to="/galleries">
-                  <span>Galleries</span>
-                </Link>
-              </li>
-
-              {/* Investments */}
-              <li id="menu-investments">
-                <Link to="/investments">
-                  <span>Investments</span>
-                </Link>
-              </li>
-
-              <li id="menu-contact" className={getClassName('menu-contact')}>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
           </div>
-        </nav>
-      </div>
 
+          {/* NAVIGATION MENU */}
+          <nav id="menu_wrapper">
+            <div id="menu">
+              {/* CHECKBOX FOR MOBILE MENU — MUST NOT BE READONLY */}
+              <input id="menudrop" type="checkbox" />
+
+              <ul id="mainMenu" onClick={handleMenuClick}>
+                <li id="menu-home" className={getClassName('menu-home')}>
+                  <Link to="/">Home</Link>
+                </li>
+
+                <li id="menu-about" className={getClassName('menu-about')}>
+                  <Link to="/about">About</Link>
+                </li>
+
+                <li id="menu-galleries">
+                  <Link to="/galleries">
+                    <span>Galleries</span>
+                  </Link>
+                </li>
+
+                <li id="menu-investments">
+                  <Link to="/investments">
+                    <span>Investments</span>
+                  </Link>
+                </li>
+
+                <li id="menu-contact" className={getClassName('menu-contact')}>
+                  <Link to="/contact">Contact</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {/* ROUTER OUTLET */}
       <main id="wrapper">
         <div id="wrapper-content-spacer" />
         <div id="main">
@@ -147,7 +157,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </main>
-    </header>
+    </>
   );
 };
 
