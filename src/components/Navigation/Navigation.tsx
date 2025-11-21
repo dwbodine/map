@@ -14,10 +14,37 @@ import './Navigation.css';
 
 const Navigation: React.FC = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState('menu-home');
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    const checkbox = document.getElementById('menudrop') as HTMLInputElement;
+    if (checkbox) checkbox.checked = !checkbox.checked;
+    setMobileMenuOpen(checkbox.checked);
+  };
 
   const closeMobileMenu = () => {
     const checkbox = document.getElementById('menudrop') as HTMLInputElement;
     if (checkbox) checkbox.checked = false;
+    setMobileMenuOpen(false);
+  };
+
+  const handleRipple = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = e.currentTarget;
+
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+
+    const rect = target.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = `${size}px`;
+    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+    target.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 500);
+
+    closeMobileMenu();
   };
 
   const handleMenuClick = (event: MouseEvent<HTMLUListElement>) => {
@@ -31,8 +58,6 @@ const Navigation: React.FC = () => {
       else if (menuItem === 'menu-investments') menuItem = 'menu-sessions';
       else if (menuItem === 'menu-occasions') menuItem = 'menu-weddings';
       setSelectedMenuItem(menuItem);
-
-      // CLOSE SLIDE-OVER PANEL AFTER CLICK
       closeMobileMenu();
     }
   };
@@ -44,16 +69,16 @@ const Navigation: React.FC = () => {
     <>
       <header id="header">
         <div className="social-border">
-          <div className="mobile-hamburger">
-            <label htmlFor="menudrop" aria-label="Open navigation menu">
-              <div className="menu-toggler-icon">
-                <div className="toggler-line first-line" />
-                <div className="toggler-line" />
-                <div className="toggler-line last-line" />
-              </div>
-            </label>
+          {/* HAMBURGER */}
+          <div className="mobile-hamburger" onClick={toggleMobileMenu}>
+            <div className={`menu-toggler-icon ${isMobileMenuOpen ? 'open' : ''}`}>
+              <div className="toggler-line first-line" />
+              <div className="toggler-line second-line" />
+              <div className="toggler-line last-line" />
+            </div>
           </div>
 
+          {/* SOCIAL ICONS */}
           <div className="social-network-container">
             <ul className="social-network social-circle">
               <li>
@@ -108,39 +133,35 @@ const Navigation: React.FC = () => {
             <div id="menu">
               <input id="menudrop" type="checkbox" />
 
-              <div className="mobile-nav-overlay">
-                <div className="mobile-nav-panel">
-                  <label
-                    htmlFor="menudrop"
-                    className="mobile-nav-close"
-                    aria-label="Close navigation menu"
-                  >
+              <div className="mobile-nav-overlay" onClick={closeMobileMenu}>
+                <div className="mobile-nav-panel" onClick={(e) => e.stopPropagation()}>
+                  <button className="mobile-nav-close" onClick={closeMobileMenu}>
                     ×
-                  </label>
+                  </button>
 
                   <ul id="mainMenu" onClick={handleMenuClick}>
                     <li id="menu-home" className={getClassName('menu-home')}>
-                      <Link to="/" onClick={closeMobileMenu}>Home</Link>
+                      <Link to="/" onClick={handleRipple}>Home</Link>
                     </li>
 
                     <li id="menu-about" className={getClassName('menu-about')}>
-                      <Link to="/about" onClick={closeMobileMenu}>About</Link>
+                      <Link to="/about" onClick={handleRipple}>About</Link>
                     </li>
 
                     <li id="menu-galleries">
-                      <Link to="/galleries" onClick={closeMobileMenu}>
+                      <Link to="/galleries" onClick={handleRipple}>
                         <span>Galleries</span>
                       </Link>
                     </li>
 
                     <li id="menu-investments">
-                      <Link to="/investments" onClick={closeMobileMenu}>
+                      <Link to="/investments" onClick={handleRipple}>
                         <span>Investments</span>
                       </Link>
                     </li>
 
                     <li id="menu-contact" className={getClassName('menu-contact')}>
-                      <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
+                      <Link to="/contact" onClick={handleRipple}>Contact</Link>
                     </li>
                   </ul>
                 </div>

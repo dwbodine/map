@@ -1,4 +1,6 @@
-/* --------- Base header + social bar (from your working CSS) --------- */
+/* ============================
+   HEADER + SOCIAL BAR
+============================ */
 
 #header {
   background-color: #ffffff;
@@ -8,40 +10,74 @@
   margin-bottom: 10px;
 }
 
+/* Top bar: hamburger | social icons | contact */
 .social-border {
   width: 100%;
   color: #ffffff;
   background-color: #F25252;
   height: 56px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  box-sizing: border-box;
 }
 
+/* Left: hamburger */
+.mobile-hamburger {
+  display: none; /* shown only on mobile */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Middle: social icons */
 .social-network-container {
   display: flex;
-  align-items: left;
-  margin: 0;
+  flex: 1 1 auto;
 }
 
+/* Right: contact info */
+.social-contact {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0 8px;
+  gap: 10px;
+}
+
+.social-contact a:link,
+.social-contact a:visited {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', 'Open Sans', serif;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.social-contact a:hover {
+  color: #F25252;
+  background-color: #FFFFFF;
+}
+
+/* Social icons */
 ul.social-network {
   list-style: none;
   display: flex;
   padding: 0 10px;
-  flex-direction: row;
+  margin: 0;
 }
 
 ul.social-network li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
+  margin: 0;
 }
 
 .social-circle li a {
   display: flex;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
@@ -52,12 +88,14 @@ ul.social-network li {
 }
 
 .social-network a.icoInstagram:hover {
-  background: -webkit-radial-gradient(50px 220px,
-      #ffda75 18%,
-      #ff3a49 43%,
-      #ff3a49 50%,
-      #e518a1 70%,
-      #6634e1 100%);
+  background: -webkit-radial-gradient(
+    50px 220px,
+    #ffda75 18%,
+    #ff3a49 43%,
+    #ff3a49 50%,
+    #e518a1 70%,
+    #6634e1 100%
+  );
 }
 
 .social-network a.icoFacebook:hover {
@@ -65,31 +103,9 @@ ul.social-network li {
   background-color: #3b5998;
 }
 
-.social-contact {
-  padding: 0 10px;
-  justify-content: end;
-  display: flex;
-  flex-direction: row;
-}
-
-.social-contact a:link,
-.social-contact a:visited {
-  display: flex;
-  font-family: 'Montserrat', 'Open Sans', serif;
-  color: #FFFFFF;
-  margin: 0 0 0 15px;
-  padding: 5px;
-  border-radius: 6px;
-}
-
-.social-contact a.icoEmail {
-  align-items: center;
-}
-
-.social-contact a:hover {
-  color: #F25252;
-  background-color: #FFFFFF;
-}
+/* ============================
+   LOGO / MASTHEAD
+============================ */
 
 #masthead {
   width: auto;
@@ -100,7 +116,7 @@ ul.social-network li {
   display: block;
   width: 100%;
   text-align: center;
-  margin: 0px 0 0px 0;
+  margin: 0;
 }
 
 #branding #blog-title {
@@ -119,31 +135,9 @@ ul.social-network li {
   height: auto;
 }
 
-#branding h1 {
-  font-size: 34px;
-  font-family: 'Dancing Script', serif;
-  color: darkgray;
-  line-height: 36px;
-  border: 0;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-#branding .description {
-  font-size: 32px;
-  font-weight: bold;
-  font-family: 'Montserrat', 'Open Sans', serif;
-  color: #faffe3;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-/* --------- Navigation wrapper / base --------- */
+/* ============================
+   NAV WRAPPER
+============================ */
 
 #menu_wrapper {
   width: auto;
@@ -162,66 +156,71 @@ ul.social-network li {
   padding: 0;
   border: 0;
   line-height: 1;
-  z-index: 999;
+  z-index: 10;
   position: relative;
 }
 
-/* Hide the checkbox visually */
+/* Hide the nav checkbox itself */
 #menu input[type='checkbox'] {
   display: none;
 }
 
-/* --------- Mobile hamburger (top-left) --------- */
+/* ============================
+   HAMBURGER ICON
+============================ */
 
-.mobile-hamburger {
-  display: none;
-}
-
-.mobile-hamburger .menu-toggler-icon {
-  text-align: left;
-  display: inline-block;
+.menu-toggler-icon {
+  position: relative;
   width: 28px;
   height: 20px;
-  cursor: pointer;
 }
 
-.mobile-hamburger .toggler-line {
+.toggler-line {
+  position: absolute;
+  left: 0;
   width: 100%;
   height: 3px;
-  margin: 4px 0;
   background-color: #faffe3;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-.mobile-hamburger .toggler-line.first-line {
-  margin-top: 0;
+.first-line {
+  top: 0;
 }
 
-.mobile-hamburger .toggler-line.last-line {
-  margin-bottom: 0;
+.second-line {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* --------- Desktop navigation (inside panel wrapper) --------- */
-
-.mobile-nav-overlay {
-  /* Desktop: just behave like a normal container */
-  position: static;
-  background: transparent;
-  backdrop-filter: none;
+.last-line {
+  bottom: 0;
 }
 
-.mobile-nav-panel {
-  position: static;
-  max-width: 100%;
-  margin: 0 auto;
-  background: transparent;
-  padding: 0;
-  box-shadow: none;
+/* OPEN STATE (hamburger → X) */
+.menu-toggler-icon.open .first-line {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
-/* main menu list */
+.menu-toggler-icon.open .second-line {
+  opacity: 0;
+}
+
+.menu-toggler-icon.open .last-line {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* ============================
+   DESKTOP MENU (DEFAULT)
+============================ */
+
 #mainMenu {
-  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
   width: auto;
   padding: 0;
   margin: 0 auto;
@@ -237,16 +236,12 @@ ul.social-network li {
   position: relative;
   border: 0;
   line-height: 25px;
-  box-sizing: content-box;
 }
 
 #mainMenu li span {
   margin: 0;
   padding: 0;
-  position: relative;
-  border: 0;
   line-height: 1;
-  box-sizing: content-box;
 }
 
 #menu a,
@@ -263,80 +258,70 @@ ul.social-network li {
   background: transparent;
   text-transform: uppercase;
   transition: color 0.4s ease;
-}
-
-#mainMenu ul li span {
-  color: #f78c8c;
-  font-family: 'Montserrat', 'Open Sans', serif;
-  font-weight: bold;
-  font-size: 13px;
-  text-decoration: none;
-  background: transparent;
-  text-transform: uppercase;
-  transition: color 0.4s ease;
+  position: relative;
+  overflow: hidden; /* for ripple */
 }
 
 #menu a:hover,
-#mainMenu ul li span:hover,
-#menu a:active,
 #menu .current_page_item a:link,
 #menu .current_page_item a:visited {
   color: #f73535;
 }
 
-/* optional submenus support */
-#menu ul ul {
-  display: none;
-  position: absolute;
-  left: 2px;
-  top: 49px;
-  background: #FFFFFF;
-  padding-bottom: 10px;
+/* ============================
+   MOBILE OVERLAY + PANEL (BASE)
+   - desktop: behave like normal container
+   - mobile: overridden below
+============================ */
+
+.mobile-nav-overlay {
+  position: static;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#menu ul ul ul {
-  display: none;
-  position: absolute;
-  left: 220px;
-  top: 2px;
-  background: #FFFFFF;
-  padding-bottom: 10px;
+.mobile-nav-panel {
+  position: static;
+  max-width: 100%;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
 }
-
-#menu ul li:hover > ul {
-  display: inherit;
-}
-
-#menu ul ul li {
-  width: 170px;
-  line-height: 10px;
-  float: none;
-  display: list-item;
-  position: relative;
-  background: #FFFFFF;
-  text-align: left;
-  height: 30px;
-}
-
-#menu i {
-  margin-left: 5px;
-}
-
-#menu li > a:only-child:after {
-  content: '';
-}
-
-#menu #menu-occasions {
-  margin: 12px 0;
-}
-
-/* --------- Mobile slide-over + glass blur --------- */
 
 .mobile-nav-close {
-  display: none; /* visible only on mobile */
+  display: none; /* only visible on mobile */
 }
 
-/* Mobile breakpoint */
+/* ============================
+   RIPPLE EFFECT
+============================ */
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  transform: scale(0);
+  animation: ripple-animation 0.5s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ============================
+   MOBILE (<= 1024px)
+============================ */
+
 @media all and (max-width: 1024px) {
   #header {
     max-height: none;
@@ -344,23 +329,26 @@ ul.social-network li {
     height: auto;
   }
 
-  #branding .description {
-    font-size: 24px;
+  /* show hamburger */
+  .mobile-hamburger {
+    display: block;
+    margin-left: 5px;
   }
 
+  /* keep 3-column layout */
   .social-border {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
-  /* Show hamburger in social bar */
-  .mobile-hamburger {
-    display: block;
-    padding: 0 10px 0 15px;
+  .social-network-container {
+    margin-left: 5px;
   }
 
-  /* Glassy full-screen overlay (dark) */
+  .social-contact {
+    padding-right: 0;
+  }
+
+  /* Glassy full-screen overlay */
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;
@@ -370,10 +358,10 @@ ul.social-network li {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
-    z-index: 998;
+    z-index: 999;
   }
 
-  /* Sliding side panel with frosted glass look */
+  /* Slide-over frosted panel */
   .mobile-nav-panel {
     position: absolute;
     top: 0;
@@ -392,7 +380,6 @@ ul.social-network li {
     flex-direction: column;
   }
 
-  /* Close button (top-right inside panel) */
   .mobile-nav-close {
     display: block;
     align-self: flex-end;
@@ -405,9 +392,8 @@ ul.social-network li {
     margin-bottom: 16px;
   }
 
-  /* Mobile main menu layout */
+  /* Mobile menu list in panel */
   #mainMenu {
-    display: flex;
     flex-direction: column;
     gap: 4px;
     width: 100%;
@@ -425,7 +411,7 @@ ul.social-network li {
     padding-bottom: 8px;
   }
 
-  /* Enable overlay + slide on checkbox toggle */
+  /* Checkbox controls overlay + slide */
   #menudrop:checked + .mobile-nav-overlay {
     opacity: 1;
     pointer-events: auto;
@@ -433,44 +419,5 @@ ul.social-network li {
 
   #menudrop:checked + .mobile-nav-overlay .mobile-nav-panel {
     transform: translateX(0);
-  }
-
-  /* Old inline mobile menu rules disabled */
-  #menu .navigation-menu-toggler {
-    display: none !important;
-  }
-
-  /* Keep hover-driven submenus from doing weird stuff in the slide-over */
-  #menu ul ul {
-    float: none;
-    position: static;
-    background: unset;
-  }
-
-  #menu ul ul li:hover > ul,
-  #menu ul li:hover > ul {
-    display: block;
-  }
-
-  #menu ul ul li {
-    display: block;
-    width: 100%;
-    background: unset;
-    height: auto;
-  }
-
-  #menu ul ul ul {
-    display: none;
-    float: none;
-    position: static;
-    left: 20px;
-    top: 5px;
-    background: #FFFFFF;
-    padding-bottom: 10px;
-  }
-
-  #menu ul ul ul li:hover > ul,
-  #menu ul ul li:hover > ul {
-    display: block;
   }
 }
