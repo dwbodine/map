@@ -8,11 +8,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .gallery-card {
-    flex: 0 1 calc(50% - 20px);
-    max-width: 50%;
+    max-width: 40%;
     box-sizing: border-box;
     text-align: center;
     transition: transform 0.4s ease, opacity 0.4s ease;
@@ -35,8 +35,31 @@
     border-radius: 6px;
 }
 
+.gallery-back {
+    color: #f78c8c;
+    font-family: 'Montserrat', 'Open Sans', serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: color 0.4s ease, font-weight 0.4 ease;
+}
+
+.gallery-back:hover {
+    color: #f73535;
+    font-weight: bold;
+}
+
+.react-photo-album--button {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.react-photo-album--button:hover {
+    transform: scale(1.06);
+    opacity: 0.5;
+}
+
 @media (max-width: 600px) {
     .gallery-card {
+        max-width: unset;
         flex: 0 1 100%;
     }
 }
