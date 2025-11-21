@@ -20,9 +20,11 @@ export default function PhotoGallery(props: GalleryProps) {
 
   return (
     <section className="gallery-section">
-      <a className="gallery-back" href="/galleries">&lt; Back</a>
+      <a className="gallery-back" href="/galleries">
+        &lt; Back
+      </a>
 
-      <h1 className="entry-title">{ props.title }</h1>
+      <h1 className="entry-title">{props.title}</h1>
 
       <RowsPhotoAlbum
         photos={props.photos}

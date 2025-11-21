@@ -9,9 +9,7 @@ const Footer: React.FC = () => {
     <footer className="footer_container">
       <div className="footer_wrapper">
         <div id="footer">
-          <p>
-            &copy; 2007–{currentYear} Marie Anna Photography
-          </p>
+          <p>&copy; 2007–{currentYear} Marie Anna Photography</p>
         </div>
       </div>
     </footer>
