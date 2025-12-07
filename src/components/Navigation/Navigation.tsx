@@ -71,7 +71,9 @@ const Navigation: React.FC = () => {
         <div className="social-border">
           {/* HAMBURGER */}
           <div className="mobile-hamburger" onClick={toggleMobileMenu}>
-            <div className={`menu-toggler-icon ${isMobileMenuOpen ? 'open' : ''}`}>
+            <div
+              className={`menu-toggler-icon ${isMobileMenuOpen ? 'open' : ''}`}
+            >
               <div className="toggler-line first-line" />
               <div className="toggler-line second-line" />
               <div className="toggler-line last-line" />
@@ -134,18 +136,28 @@ const Navigation: React.FC = () => {
               <input id="menudrop" type="checkbox" />
 
               <div className="mobile-nav-overlay" onClick={closeMobileMenu}>
-                <div className="mobile-nav-panel" onClick={(e) => e.stopPropagation()}>
-                  <button className="mobile-nav-close" onClick={closeMobileMenu}>
+                <div
+                  className="mobile-nav-panel"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    className="mobile-nav-close"
+                    onClick={closeMobileMenu}
+                  >
                     ×
                   </button>
 
                   <ul id="mainMenu" onClick={handleMenuClick}>
                     <li id="menu-home" className={getClassName('menu-home')}>
-                      <Link to="/" onClick={handleRipple}>Home</Link>
+                      <Link to="/" onClick={handleRipple}>
+                        Home
+                      </Link>
                     </li>
 
                     <li id="menu-about" className={getClassName('menu-about')}>
-                      <Link to="/about" onClick={handleRipple}>About</Link>
+                      <Link to="/about" onClick={handleRipple}>
+                        About
+                      </Link>
                     </li>
 
                     <li id="menu-galleries">
@@ -160,8 +172,13 @@ const Navigation: React.FC = () => {
                       </Link>
                     </li>
 
-                    <li id="menu-contact" className={getClassName('menu-contact')}>
-                      <Link to="/contact" onClick={handleRipple}>Contact</Link>
+                    <li
+                      id="menu-contact"
+                      className={getClassName('menu-contact')}
+                    >
+                      <Link to="/contact" onClick={handleRipple}>
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </div>
