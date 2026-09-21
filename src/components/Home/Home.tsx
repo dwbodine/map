@@ -14,9 +14,9 @@ const Home: React.FC = () => {
     <section className="entry-content">
       <figure className="aligncenter">
         <img
-          src="img/cover.jpg"
+          src="img/cover.png"
           alt="Cover - Marie Anna Photography"
-          srcSet="img/cover.jpg 800w, img/cover-300.jpg 300w"
+          srcSet="img/cover.png 800w, img/cover-300.png 300w"
           sizes="(max-width: 800px) 100vw, 800px"
           loading="lazy"
           width={800}

@@ -3,7 +3,6 @@
     "allowJs": false,
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "checkJs": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -23,7 +22,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
