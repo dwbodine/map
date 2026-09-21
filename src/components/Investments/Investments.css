@@ -6,6 +6,8 @@
 
 .investment-content {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -15,6 +17,7 @@
     box-sizing: border-box;
     text-align: center;
     transition: opacity 0.3s ease;
+    margin: 25px;
 }
 
 .investment-card:hover {

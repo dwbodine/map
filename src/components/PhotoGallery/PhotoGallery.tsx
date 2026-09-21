@@ -11,6 +11,7 @@ import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
 interface GalleryProps {
   title: string;
+  description?: string;
   name: string;
   photos: Photo[];
 }
@@ -25,6 +26,10 @@ export default function PhotoGallery(props: GalleryProps) {
       </a>
 
       <h1 className="entry-title">{props.title}</h1>
+
+      {props.description && (
+        <div className="gallery-description">{props.description}</div>
+      )}
 
       <RowsPhotoAlbum
         photos={props.photos}
