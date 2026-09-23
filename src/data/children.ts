@@ -89,6 +89,18 @@ const childrenPhotos: Photo[] = [
     src: 'mason_1.960x640.jpg',
     alt: '',
   },
+  {
+    src: 'IMG_0246.960x640.jpg',
+    alt: '',
+  },
+  {
+    src: 'IMG_0776.960x640.jpg',
+    alt: '',
+  },
+  {
+    src: 'IMG_8233.960x640.jpg',
+    alt: '',
+  },
 ].map(({ src, ...rest }) => {
   const matcher = src.match(/^(.*)\.(\d+)x(\d+)\.(.*)$/)!;
 

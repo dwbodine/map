@@ -14,6 +14,12 @@ function imageLink(
 
 const familyPhotos: Photo[] = [
   {
+    src: 'IMG_8976.640x960.jpg',
+  },
+  {
+    src: 'IMG_2191.640x960.jpg',
+  },
+  {
     src: '8.960x640.jpg',
   },
   {
@@ -53,10 +59,11 @@ const familyPhotos: Photo[] = [
     src: 'IMG_9603-1.960x640.jpg',
   },
   {
-    src: 'IMG_9758.960x640.jpg',
+    src: 'IMG_7735.960x640.jpg',
   },
+  
 ].map(({ src, ...rest }) => {
-  const matcher = src.match(/^(.*)\.(\d+)x(\d+)\.(.*)$/)!;
+  const matcher = src?.match(/^(.*)\.(\d+)x(\d+)\.(.*)$/)!;
 
   const path = matcher[1] || '';
   const width = Number.parseInt(matcher[2] || '0', 10);

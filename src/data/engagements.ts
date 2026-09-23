@@ -9,30 +9,12 @@ function imageLink(
   size: number,
   extension: string
 ) {
-  return `/galleries/vintage_flair/${path}.${width}x${height}.${size}w.${extension}`;
+  return `/galleries/engagements/${path}.${width}x${height}.${size}w.${extension}`;
 }
 
-const vintageFlairPhotos: Photo[] = [
+const engagementPhotos: Photo[] = [
   {
-    src: 'IMG_0988-1.960x640.jpg',
-  },
-  {
-    src: 'IMG_4043.960x640.jpg',
-  },
-  {
-    src: 'IMG_4958.960x640.jpg',
-  },
-  {
-    src: 'IMG_5025-1.960x640.jpg',
-  },
-  {
-    src: 'IMG_5032-1.960x640.jpg',
-  },
-  {
-    src: 'IMG_5420-1.960x640.jpg',
-  },
-  {
-    src: 'IMG_6523.640x960.jpg',
+    src: 'IMG_7949.960x640.jpg',
   },
 ].map(({ src, ...rest }) => {
   const matcher = src.match(/^(.*)\.(\d+)x(\d+)\.(.*)$/)!;
@@ -56,4 +38,4 @@ const vintageFlairPhotos: Photo[] = [
   } as Photo;
 });
 
-export default vintageFlairPhotos;
+export default engagementPhotos;

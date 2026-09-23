@@ -5,11 +5,12 @@ import React from 'react';
 import PhotoGallery from '@/components/PhotoGallery/PhotoGallery';
 import childrenPhotos from '@/data/children';
 import familyPhotos from '@/data/family';
+import graduatePhotos from '@/data/graduates';
 import justForFunPhotos from '@/data/justforfun';
 import maternityPhotos from '@/data/maternity';
-import specialPhotos from '@/data/special';
 import vintageFlairPhotos from '@/data/vintageFlair';
-import weddingPhotos from '@/data/weddings';
+import SpecialOccasionGallery from '../PhotoGallery/SpecialOccasionGallery';
+import engagementPhotos from '@/data/engagements';
 
 const GalleryRouter: React.FC = () => {
   return (
@@ -51,16 +52,6 @@ const GalleryRouter: React.FC = () => {
         }
       />
       <Route
-        path="weddings"
-        element={
-          <PhotoGallery
-            title="Weddings"
-            name="weddings"
-            photos={weddingPhotos}
-          />
-        }
-      />
-      <Route
         path="maternity"
         element={
           <PhotoGallery
@@ -73,10 +64,13 @@ const GalleryRouter: React.FC = () => {
       <Route
         path="special"
         element={
-          <PhotoGallery
-            title="Special Occasions"
-            name="special"
-            photos={specialPhotos}
+          <SpecialOccasionGallery
+            graduatePhotos={graduatePhotos}
+            graduateDescription="Whether you are graduating from nursing school or high school, your graduating portraits should reflect your personality, style, and individuality! We'll customize your session to bring vision to your life."
+            vintagePhotos={vintageFlairPhotos}
+            vintageDescription="From a glamorous pinup experience to the dramatic, moody feel of film noir, I love creating portraits that are unique, expressive and truly you."
+            engagementPhotos={engagementPhotos}
+            engagementDescription="Celebrate your love with timeless engagement photos filled with personality, connection, and vintage charm. Every package is different, so we can create an experience tailored to your vision, style, and story."
           />
         }
       />
