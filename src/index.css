@@ -394,3 +394,10 @@ a:active {
 section {
   min-height: 65vh;
 }
+
+
+@media (max-width: 480px) {
+    .entry-title {
+        font-size: 24px;
+    }
+}
